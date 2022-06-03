@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 import { actionCreators } from "../store";
 
 function ToDo({ text, onBtnClick, id }) {
+  console.log("ToDo.js: ", text, onBtnClick, id);
   return (
     <li>
-      <Link to={`/${id}`}></Link>
-      {text} <button onClick={onBtnClick}>DEL</button>
+      <Link to={`/${id}`}>{text}</Link>
+      <button onClick={onBtnClick}>DEL</button>
     </li>
   );
 }
