@@ -6,16 +6,15 @@ import { actionCreators } from "../store";
 function ToDo({ text, onBtnClick, id }) {
   return (
     <li>
-      <Link to={`/${id}`}>
-        {text} <button onClick={onBtnClick}>DEL</button>
-      </Link>
+      <Link to={`/${id}`}></Link>
+      {text} <button onClick={onBtnClick}>DEL</button>
     </li>
   );
 }
 
 function mapDispatchToProps(dispatch, ownProps) {
   return {
-    onBtnClick: () => dispatch(actionCreators.deleteTodo(ownProps.id)),
+    onBtnClick: () => dispatch(actionCreators.deleteToDo(ownProps.id)),
   };
 }
 
